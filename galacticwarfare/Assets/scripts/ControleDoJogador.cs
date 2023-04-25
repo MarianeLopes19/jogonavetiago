@@ -6,9 +6,7 @@ public class ControleDoJogador : MonoBehaviour
 {
     public Rigidbody2D forcaFisica;
     public float ligeirezaDaNabe;
-    public GameObject laserAtaque1danave;
-    public Transform disparo1;
-
+    
     private Vector2 direcaoDaNave;
     // Start is called before the first frame update
     void Start()
