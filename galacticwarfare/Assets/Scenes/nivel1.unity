@@ -494,6 +494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcaFisica: {fileID: 1349963462}
   ligeirezaDaNabe: 10
+  laser: {fileID: 7178337081988459255, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
+  pontoodisparosimples: {fileID: 2075735972}
 --- !u!50 &1349963462
 Rigidbody2D:
   serializedVersion: 4
@@ -716,60 +718,3 @@ Transform:
   m_Father: {fileID: 1349963465}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8518054861460392393
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.703182
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7110099
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4753655839574384319, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90.634
-      objectReference: {fileID: 0}
-    - target: {fileID: 7178337081988459255, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
-      propertyPath: m_Name
-      value: Laser do Jogador
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
