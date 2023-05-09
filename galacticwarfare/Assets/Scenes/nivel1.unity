@@ -156,7 +156,7 @@ MonoBehaviour:
   NaveAtque: {fileID: 238335232}
   CruzadorBatalha: {fileID: 0}
   Chefe: {fileID: 0}
-  speed: -3
+  speed: -5
 --- !u!1 &393455491
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +530,8 @@ MonoBehaviour:
   ligeirezaDaNabe: 10
   laser: {fileID: 7178337081988459255, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
   pontoodisparosimples: {fileID: 2075735972}
+  espaco: 32
+  tempodotiro: 0.5
 --- !u!50 &1349963462
 Rigidbody2D:
   serializedVersion: 4
@@ -738,12 +740,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d781ba55bf4a10249be5be4347cec8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoAparecer: 40
+  tempoAparecer: 90
   "Ca\xE7aEstelar": {fileID: 0}
   NaveAtque: {fileID: 0}
   CruzadorBatalha: {fileID: 0}
   Chefe: {fileID: 2015468822}
-  speed: -3
+  speed: -5
 --- !u!1 &2075735971
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,12 +794,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d781ba55bf4a10249be5be4347cec8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoAparecer: 40
+  tempoAparecer: 60
   "Ca\xE7aEstelar": {fileID: 0}
   NaveAtque: {fileID: 0}
   CruzadorBatalha: {fileID: 2146432767}
   Chefe: {fileID: 0}
-  speed: -3
+  speed: -5
 --- !u!1001 &443109609949204646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,7 +813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443109610184844377, guid: 524867daebc875a47a8c6c6d08b7efe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.62
+      value: 28.96
       objectReference: {fileID: 0}
     - target: {fileID: 443109610184844377, guid: 524867daebc875a47a8c6c6d08b7efe4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -872,15 +874,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3761768171434864050, guid: 3b25b9bba5b042045b1fdf0798adb60b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.54
+      value: 80.9
       objectReference: {fileID: 0}
     - target: {fileID: 3761768171434864050, guid: 3b25b9bba5b042045b1fdf0798adb60b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.19
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 3761768171434864050, guid: 3b25b9bba5b042045b1fdf0798adb60b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.16
+      value: -7.42
       objectReference: {fileID: 0}
     - target: {fileID: 3761768171434864050, guid: 3b25b9bba5b042045b1fdf0798adb60b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -941,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.07
+      value: 52.95
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1042,7 +1044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091156615529028364, guid: 801a9a80a4c66be4492804684007776f, type: 3}
       propertyPath: speed
-      value: -3
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5091156615529028364, guid: 801a9a80a4c66be4492804684007776f, type: 3}
       propertyPath: NaveAtque
@@ -1054,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 153548597}
     - target: {fileID: 5091156615529028364, guid: 801a9a80a4c66be4492804684007776f, type: 3}
       propertyPath: tempoAparecer
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5091156615529028364, guid: 801a9a80a4c66be4492804684007776f, type: 3}
       propertyPath: CruzadorBatalha

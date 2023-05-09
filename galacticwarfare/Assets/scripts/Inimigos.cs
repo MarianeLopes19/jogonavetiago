@@ -32,12 +32,12 @@ public class Inimigos : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (tempoAparecer >= 5)
-        {
-            rig.velocity = Vector2.right * speed;
-        }
-        
-        
+                if (tempoAparecer >= 5)
+                {
+                    rig.velocity = Vector2.right * speed;
+                }
+                
+                
         
     }
 

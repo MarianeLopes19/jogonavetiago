@@ -20,7 +20,7 @@ public class ControleDoJogador : MonoBehaviour
 
     public KeyCode espaco = KeyCode.Space;
 
-    public float tempodotiro = 0.5f;
+    public float tempodotiro = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +49,7 @@ public class ControleDoJogador : MonoBehaviour
         StartCoroutine("tiro");
     }
 
-    IEnumerator tiro()
+    void tiro()
     {
         if (Input.GetKey(espaco) && Time.time > estaAtirando)
         {
