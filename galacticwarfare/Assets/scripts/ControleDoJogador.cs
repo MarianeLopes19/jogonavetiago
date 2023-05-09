@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ControleDoJogador : MonoBehaviour
@@ -10,11 +12,15 @@ public class ControleDoJogador : MonoBehaviour
     
     private Vector2 direcaoDaNave;
 
-    private bool estaAtirando;
+    private float estaAtirando = 0.0f;
 
     public GameObject laser;
 
     public Transform pontoodisparosimples;
+
+    public KeyCode espaco = KeyCode.Space;
+
+    public float tempodotiro = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,11 +51,13 @@ public class ControleDoJogador : MonoBehaviour
 
     IEnumerator tiro()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKey(espaco) && Time.time > estaAtirando)
         {
-            estaAtirando = true;
-            Instantiate(laser, pontoodisparosimples.position, pontoodisparosimples.rotation);
-            yield return new WaitForSeconds(0.2f);
+            estaAtirando = Time.time + tempodotiro;
+            GameObject tiro =  Instantiate(laser, pontoodisparosimples.position, pontoodisparosimples.rotation);
+            tiro.GetComponent<SpriteRenderer>().sortingOrder = 10;
+
+
         }
     }
 
