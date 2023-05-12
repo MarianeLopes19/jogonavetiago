@@ -60,9 +60,4 @@ public class ControleDoJogador : MonoBehaviour
 
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        throw new NotImplementedException();
-    }
 }
