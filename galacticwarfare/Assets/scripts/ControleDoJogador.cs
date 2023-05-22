@@ -13,7 +13,7 @@ public class ControleDoJogador : MonoBehaviour
     
     private Vector2 direcaoDaNave;
 
-    private float estaAtirando = 0.0f;
+    public float estaAtirando = 0.0f;
 
     public GameObject laser;
 

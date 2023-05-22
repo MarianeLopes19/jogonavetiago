@@ -1075,13 +1075,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cruzador de Batalha
       objectReference: {fileID: 0}
+    - target: {fileID: 4931335139682007569, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 482.6
+      value: 363.7
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1139,6 +1143,10 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4931335139682007574, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
 --- !u!1 &156781570 stripped
@@ -1164,7 +1172,8 @@ MonoBehaviour:
   CruzadorBatalha: {fileID: 156781571}
   Chefe: {fileID: 0}
   vida: 0
-  speed: -20
+  damage: 1
+  speed: -15
 --- !u!1 &166137220
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,6 +7469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcaFisica: {fileID: 1349963462}
   ligeirezaDaNabe: 10
+  estaAtirando: 0
   laser: {fileID: 7178337081988459255, guid: fc0ed2181f628614d9254fcbd0c95ffb, type: 3}
   pontoodisparosimples: {fileID: 2075735972}
   espaco: 32
@@ -8249,6 +8259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1508274029}
+  - component: {fileID: 1508274030}
   m_Layer: 5
   m_Name: Barradevida
   m_TagString: Untagged
@@ -8278,6 +8289,19 @@ RectTransform:
   m_AnchoredPosition: {x: 29.9, y: -11.6}
   m_SizeDelta: {x: 51, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1508274030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508274028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999f8bba74e211b4daf6fcd7e2bd4e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrasVermelhas: []
 --- !u!1 &1513204364
 GameObject:
   m_ObjectHideFlags: 0
@@ -8571,17 +8595,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cruzador de Batalha (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4931335139682007569, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 488.21
+      value: 346.1
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.93
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8635,6 +8663,10 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4931335139682007574, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
 --- !u!1 &1574547548 stripped
@@ -8660,7 +8692,8 @@ MonoBehaviour:
   CruzadorBatalha: {fileID: 1574547549}
   Chefe: {fileID: 0}
   vida: 0
-  speed: -20
+  damage: 1
+  speed: -15
 --- !u!1 &1577344542
 GameObject:
   m_ObjectHideFlags: 0
@@ -9741,11 +9774,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 486.12
+      value: 357.3
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.94
+      value: 13.98
       objectReference: {fileID: 0}
     - target: {fileID: 4931335139682007572, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9799,6 +9832,10 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4931335139682007574, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 763c347a7dc061c458f34252b46e9191, type: 3}
 --- !u!1 &1766669710 stripped
@@ -9824,7 +9861,8 @@ MonoBehaviour:
   CruzadorBatalha: {fileID: 1766669711}
   Chefe: {fileID: 0}
   vida: 0
-  speed: -20
+  damage: 1
+  speed: -15
 --- !u!1 &1786267445
 GameObject:
   m_ObjectHideFlags: 0

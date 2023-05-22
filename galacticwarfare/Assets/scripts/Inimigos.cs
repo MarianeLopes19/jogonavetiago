@@ -56,10 +56,8 @@ public class Inimigos : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (Collision.gameObject.CompareTag("Player"))
-        {
-            Collision.gameObject.GetComponent<ControleDoJogador>().Damage(damage);
-        }
+       
+        
            
     }
 }
