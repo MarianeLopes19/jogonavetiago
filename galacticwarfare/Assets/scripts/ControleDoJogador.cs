@@ -22,10 +22,12 @@ public class ControleDoJogador : MonoBehaviour
     public KeyCode espaco = KeyCode.Space;
 
     public float tempodotiro = 10f;
+
+    public int vida = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ControleDaVida.instance.UpdateLives(vida);
     }
 
     // Update is called once per frame
@@ -59,6 +61,16 @@ public class ControleDoJogador : MonoBehaviour
             tiro.GetComponent<SpriteRenderer>().sortingOrder = 10;
 
 
+        }
+    }
+
+    public void Damage(int dmg)
+    {
+        vida -= dmg;
+        ControleDaVida.instance.UpdateLives(vida);
+        if (vida <= 0)
+        {
+            // chamar game Over
         }
     }
 }

@@ -11,6 +11,8 @@ public class Inimigos : MonoBehaviour
     public Inimigos NaveAtque;
     public Inimigos CruzadorBatalha;
     public Inimigos Chefe;
+    public int vida;
+    public int damage = 1;
     
     
 
@@ -42,6 +44,22 @@ public class Inimigos : MonoBehaviour
     }
 
 
-    
-    
+    public void Damage(int dmg)
+    {
+        vida -= dmg;
+
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (Collision.gameObject.CompareTag("Player"))
+        {
+            Collision.gameObject.GetComponent<ControleDoJogador>().Damage(damage);
+        }
+           
+    }
 }
