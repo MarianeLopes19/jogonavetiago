@@ -27,6 +27,8 @@ public class Lesersimples : MonoBehaviour
     {
         if (collision.gameObject.tag == "inimigo")
         {
+            Inimigos inimigos = collision.GetComponent<Inimigos>();
+            inimigos.Destruir();
             collision.GetComponent<Inimigos>().Damage(damage);
             Destroy(gameObject);
         }
