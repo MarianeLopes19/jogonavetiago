@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Escudo : MonoBehaviour
+public static class ContadorPontuacao 
 {
     // Start is called before the first frame update
     void Start()
