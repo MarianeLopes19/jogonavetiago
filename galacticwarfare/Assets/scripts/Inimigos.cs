@@ -14,8 +14,6 @@ public class Inimigos : MonoBehaviour
     public int vida;
     public int damage = 1;
     
-    
-
     public float speed;
     // Start is called before the first frame update
     void Start()
