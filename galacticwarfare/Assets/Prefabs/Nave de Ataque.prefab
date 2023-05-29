@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1899083687}
   m_Layer: 0
   m_Name: Nave de Ataque
-  m_TagString: Untagged
+  m_TagString: inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 443109610184844381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.69, y: 2.03, z: 0}
-  m_LocalScale: {x: 5.635572, y: 4.9195642, z: 3.2569113}
+  m_LocalScale: {x: 25.572355, y: 21.010185, z: 3.2569113}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,7 +142,9 @@ MonoBehaviour:
   NaveAtque: {fileID: 0}
   CruzadorBatalha: {fileID: 0}
   Chefe: {fileID: 0}
-  speed: -5
+  vida: 0
+  damage: 1
+  speed: -40
 --- !u!114 &1899083687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempoAparecer: 20
   "Ca\xE7aEstelar": {fileID: 1899083687}
-  NaveAtque: {fileID: 0}
+  NaveAtque: {fileID: 8888987810725994636}
   CruzadorBatalha: {fileID: 0}
   Chefe: {fileID: 0}
-  speed: -5
+  vida: 0
+  damage: 1
+  speed: -40

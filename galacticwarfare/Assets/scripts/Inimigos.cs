@@ -11,9 +11,9 @@ public class Inimigos : MonoBehaviour
     public Inimigos NaveAtque;
     public Inimigos CruzadorBatalha;
     public Inimigos Chefe;
+    public int vida;
+    public int damage = 1;
     
-    
-
     public float speed;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,28 @@ public class Inimigos : MonoBehaviour
     }
 
 
-    
-    
+    public void Damage(int dmg)
+    {
+        vida -= dmg;
+
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            col.gameObject.GetComponent<ControleDoJogador>().Damage(10);
+        }
+    }
+
+    public void Destruir()
+    {
+        ControladorPontuacao.Pontuacao++;
+        Destroy(this.gameObject);
+    }
 }

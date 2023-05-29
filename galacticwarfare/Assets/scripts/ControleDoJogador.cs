@@ -13,7 +13,7 @@ public class ControleDoJogador : MonoBehaviour
     
     private Vector2 direcaoDaNave;
 
-    private float estaAtirando = 0.0f;
+    public float estaAtirando = 0.0f;
 
     public GameObject laser;
 
@@ -22,10 +22,23 @@ public class ControleDoJogador : MonoBehaviour
     public KeyCode espaco = KeyCode.Space;
 
     public float tempodotiro = 10f;
+
+    public int vidaInicial = 5;
+
+    public int energiaInicial = 5;
+
+    private int vida;
+
+    private int energia;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        vida = vidaInicial;
+        energia = energiaInicial;
+        ControleDaVida.instance.UpdateLives(vida);
+        ControleDaVida.instance.UpdateEnergy(energia);
+        ControladorPontuacao.Pontuacao = 0;
     }
 
     // Update is called once per frame
@@ -59,6 +72,24 @@ public class ControleDoJogador : MonoBehaviour
             tiro.GetComponent<SpriteRenderer>().sortingOrder = 10;
 
 
+        }
+    }
+
+    public void Damage(int dmg)
+    {
+        energia--;
+        ControleDaVida.instance.UpdateEnergy(energia);
+        
+        if (energia <= 0)
+        {
+            // chamar game Over
+            vida--;
+            ControleDaVida.instance.UpdateLives(vida);
+            if (vida > 0)
+            {
+                energia = energiaInicial;
+                ControleDaVida.instance.UpdateEnergy(energia);
+            }
         }
     }
 }
