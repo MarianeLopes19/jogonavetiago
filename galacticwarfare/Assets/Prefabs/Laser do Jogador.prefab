@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4560449189390361440}
   m_Layer: 0
   m_Name: Laser do Jogador
-  m_TagString: Untagged
+  m_TagString: leser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9ae870d66e0084488bd5552d6320d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   damage: 1
 --- !u!50 &-4560449189390361440
 Rigidbody2D:

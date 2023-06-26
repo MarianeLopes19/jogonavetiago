@@ -72,7 +72,7 @@ public class ControleDoJogador : MonoBehaviour
             tiro.GetComponent<SpriteRenderer>().sortingOrder = 10;
 
 
-        }
+        } 
     }
 
     public void Damage(int dmg)

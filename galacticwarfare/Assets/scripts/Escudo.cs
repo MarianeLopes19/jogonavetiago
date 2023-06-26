@@ -10,7 +10,7 @@ public class Escudo : MonoBehaviour
     {
         Debug.Log("deu certo");
 
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("leser"))
         {
             vida--;
             Destroy(collision.gameObject);

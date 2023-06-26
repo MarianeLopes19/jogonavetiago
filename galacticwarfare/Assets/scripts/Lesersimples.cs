@@ -25,7 +25,7 @@ public class Lesersimples : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "inimigo")
+        if (collision.CompareTag("inimigo"))
         {
             Inimigos inimigos = collision.GetComponent<Inimigos>();
             inimigos.Destruir();

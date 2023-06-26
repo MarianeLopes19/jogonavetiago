@@ -34,7 +34,7 @@ public class Inimigos : MonoBehaviour
     {
                 if (tempoAparecer >= 5)
                 {
-                    rig.velocity = Vector2.right * speed;
+                   rig .velocity = Vector2.right * speed;
                 }
                 
                 
